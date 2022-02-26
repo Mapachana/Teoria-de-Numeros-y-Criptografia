@@ -104,6 +104,9 @@ Paso: 26,  acu: 15507894,  base: 44851232
 Paso: 27,  acu: 1,  base: 55498452  
 \end{verbatim}
 
+Luego $2^{n-1}\equiv 1 \mod n$.
+
+
 \textbf{Base 3}
 \begin{verbatim}
 Paso: 0,  acu: 1,  base: 3  
@@ -135,6 +138,9 @@ Paso: 25,  acu: 51758518,  base: 43324625
 Paso: 26,  acu: 51758518,  base: 75071723  
 Paso: 27,  acu: 1,  base: 67602701  
 \end{verbatim}
+
+Luego $3^{n-1}\equiv 1 \mod n$.
+
 
 \textbf{Base 5}
 \begin{verbatim}
@@ -168,6 +174,9 @@ Paso: 26,  acu: 63235719,  base: 8671437
 Paso: 27,  acu: 1,  base: 28118256  
 \end{verbatim}
 
+Luego $5^{n-1}\equiv 1 \mod n$.
+
+
 \textbf{Base 7}
 \begin{verbatim}
 Paso: 0,  acu: 1,  base: 7  
@@ -199,6 +208,9 @@ Paso: 25,  acu: 40666288,  base: 55376817
 Paso: 26,  acu: 40666288,  base: 56629098  
 Paso: 27,  acu: 1,  base: 6352934  
 \end{verbatim}
+
+Luego $7^{n-1}\equiv 1 \mod n$.
+
 
 \textbf{Base 11}
 \begin{verbatim}
@@ -232,7 +244,10 @@ Paso: 26,  acu: 7518936,  base: 27324237
 Paso: 27,  acu: 1,  base: 74340218  
 \end{verbatim}
 
-Como podemos ver, el número es pseudoprimo de Fermat para todas las bases, por lo que se va a comprobar para todas ellas si es pseudoprimo de Euler. Para ello comprobamos $\left( \frac{p}{n} \right)= p^{\frac{n-1}{2}}\mod n$ usando de nuevo el algoritmo de exponenciación rápida de derecha a izquierda.
+Luego $11^{n-1}\equiv 1 \mod n$.
+
+
+Como podemos ver, el número es posible primo de Fermat para todas las bases, por lo que se va a comprobar para todas ellas si es posible primo de Euler. Para ello comprobamos $\left( \frac{p}{n} \right)= p^{\frac{n-1}{2}}\mod n$ usando de nuevo el algoritmo de exponenciación rápida de derecha a izquierda del ejercicio 1.
 
 \subsubsection{Posibles primos de Euler}
 
@@ -267,6 +282,8 @@ Paso: 25,  acu: 72660827,  base: 50932700
 Paso: 26,  acu: 1,  base: 44851232  
 \end{verbatim}
 
+Luego $2^{\frac{n-1}{2}}\equiv 1\mod n$
+
 Y, del apartado anterior habíamos obtenido que el símbolo de Jacobi con $p=2$ era $1$, por tanto coincide y es un posible primo de Euler para la base $2$.
 
 \textbf{Base 3}
@@ -299,6 +316,8 @@ Paso: 24,  acu: 66936124,  base: 62708747
 Paso: 25,  acu: 66936124,  base: 43324625  
 Paso: 26,  acu: 1,  base: 75071723 
 \end{verbatim}
+
+Luego $3^{\frac{n-1}{2}}\equiv 1\mod n$
 
 Y, del apartado anterior habíamos obtenido que el símbolo de Jacobi con $p=3$ era $1$, por tanto coincide y es un posible primo de Euler para la base $3$.
 
@@ -333,6 +352,8 @@ Paso: 25,  acu: 11756279,  base: 10805207
 Paso: 26,  acu: 1,  base: 8671437  
 \end{verbatim}
 
+Luego $5^{\frac{n-1}{2}}\equiv 1\mod n$
+
 De nuevo, del apartado anterior habíamos obtenido que el símbolo de Jacobi con $p=5$ era $1$, por tanto coincide y es un posible primo de Euler para la base $5$.
 
 \textbf{Base 7}
@@ -365,6 +386,8 @@ Paso: 24,  acu: 17947736,  base: 69077328
 Paso: 25,  acu: 17947736,  base: 55376817  
 Paso: 26,  acu: 1,  base: 56629098  
 \end{verbatim}
+
+Luego $7^{\frac{n-1}{2}}\equiv 1\mod n$
 
 Del apartado anterior habíamos obtenido que el símbolo de Jacobi con $p=7$ era $1$, por tanto coincide y es un posible primo de Euler para la base $7$.
 
@@ -399,14 +422,16 @@ Paso: 25,  acu: 2469011,  base: 7393889
 Paso: 26,  acu: 1,  base: 27324237 
 \end{verbatim}
 
+Luego $11^{\frac{n-1}{2}\equiv 1}\mod n$
+
 Y, del apartado anterior habíamos obtenido que el símbolo de Jacobi con $p=11$ era $1$, por tanto coincide y es un posible primo de Euler para la base $11$.
 
-Como todos los números obtenidos coinciden con su símbolo de Jacobi, $n$ es pseudoprimo de Euler para todas las bases.
+Como todos los números obtenidos coinciden con su símbolo de Jacobi, $n$ es posible primo de Euler para todas las bases.
 
 \subsection{Apartado 3}
 
 \textbf{¿Es tu número $n$ pseudoprimo de Fermat o de Euler para alguna de las bases?}
 
-Del apartado anterior tenemos que $n$ es pseudoprimo de Fermat para todas las bases, además, también es pseudoprimo de Euler para todas ellas.
+Del apartado anterior tenemos que $n$ es posible primo de Fermat para todas las bases, además, también es posible primo de Euler para todas ellas. Dado que no he encontrado ningún factor suyo creo que $n$ en efecto es primo, y por tanto no sería pseudoprimo para ninguna base.
 
 \end{document}
