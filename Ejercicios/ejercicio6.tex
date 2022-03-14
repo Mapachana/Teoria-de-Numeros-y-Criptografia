@@ -187,31 +187,34 @@ A[109]= 127039477665633519662958479880692314474734575421763661347441,
 B[109]= 1439454187758029116895202511637878917796440085175020521218
 A[110]= 497586282289400856040823968725519168099846988012076378629818, 
 B[110]= 5638032137518668487771917797885014649796028953714788160325
-
 \end{verbatim}
 
 \subsection{Apartado 2}
-\textbf{Calcula las soluciones de las ecuaciones de Pell, $x^2 - py^2=±1$}
+\textbf{Calcula las soluciones de las ecuaciones de Pell, $x^2 - py^2=\pm 1$}
 
 Como el período de $p$ es impar (111) tenemos que la menor solución de $x^2-py^2=-1$ es:
 
-a = 497586282289400856040823968725519168099846988012076378629818, 
+x = 497586282289400856040823968725519168099846988012076378629818, 
 
-b = 5638032137518668487771917797885014649796028953714788160325
+y = 5638032137518668487771917797885014649796028953714788160325
 
-donde a y b se han obtenido como los convergentes en el paso 110 (A[110] y B[110]).
+donde x y y se han obtenido como los convergentes en el paso 110 (A[110] y B[110]), calculados en el apartado anterior.
 
 
 \subsection{Apartado 3}
 
 \textbf{Calcula las unidades del anillo de enteros cuadráticos $\mathbb{Z}[\sqrt{p}]$.}
 
+Dado el apartado anterior, cualquier unidad del anillo cuadrático $\mathbb{Z}[\sqrt{p}]$ es una potencia salvo el signo de $a+b\sqrt{p}$, es decir:
 
+$$x+y\sqrt{p}=\pm (a+b\sqrt{p})^n$$
+
+donde $n$ es un entero.
 
 \subsection{Apartado 4}
 
 \textbf{¿ Es $\mathbb{Z}[\sqrt{p}]$ el anillo de enteros del cuerpo $\mathbb{Q}[\sqrt{p}]$?}
 
-
+Como $p\equiv 1 \mod 4$ tenemos que $O_{\mathbb{Q}[\sqrt{p}]}=\{ m+n\frac{1+\sqrt{p}}{2}, m,n\in\mathbb{Z}\} =\mathbb{Z}[\frac{1+\sqrt{p}}{2}]$, por lo que $\mathbb{Z}[\sqrt{p}]$ no es anillo de enteros de $\mathbb{Q}[\sqrt{p}]$.
 
 \end{document}
