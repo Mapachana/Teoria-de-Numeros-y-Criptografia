@@ -622,11 +622,15 @@ Tenemos $r=n+1=36580545945776718558633000960212$.
 Aplicando el método $\rho$ de Polard obtenemos que:
 $$r=2^2\cdot 19\cdot 53\cdot 43117\cdot 210626099398147601381287.$$
 
+Al aplicar $\rho$ de Polard, primos hemos eliminado los factores 2 por simplicidad, de modo que el número al que aplicamos el algoritmo es $9145136486444179639658250240053$, y se descompone en un total de 558 iteraciones.
+
 Vamos a comprobar ahora que $43117$ y $210626099398147601381287$ son primos.
 
 Sea $p_1=43117$, vamos a comprobar que es un número primo mediante Lucas-Lehmer. Para ello comenzamos factorizando $p_1-1$, de nuevo usando $\rho$ de Polard:
 
 $$p_1-1=2^2\cdot 3\cdot 3593$$
+
+De nuevo, primero se divide entre los factores 2 y aplicamos el algoritmo a $10779$, para el que solo es necesaria 1 iteración.
 
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $43117$ porque $2^{43117-1}\equiv 1\mod 43117$ y $2^{\frac{43117-1}{p}}\not\equiv 1\mod 43117 $ para $p\in\{2,3,3593\}$ pues:
 
@@ -637,6 +641,8 @@ $$2^{\frac{43117-1}{3593}}\equiv 4096\mod 43117$$
 Consideramos ahora $p_2=210626099398147601381287$. Factorizamos de nuevo $p_2-1$:
 
 $$p_2-1=2\cdot 3\cdot 113\cdot 17\cdot 25373\cdot 733\cdot 463867\cdot 2118187.$$
+
+Sacamos los factores 2 y aplicamos el método a $105313049699073800690643$, para lo que se necesitan 626 iteraciones en total.
 
 Y, con Lucas-Lehmer tenemos que $a=5$ es un elemento primitivo para $p_2$ porque $5^{p_2-1}\equiv 1\mod p_2$ y $5^{\frac{p_2-1}{p}}\not\equiv 1\mod p_2 $ para $p\in\{2, 3, 113, 17, 25373, 733, 463867, 2118187\}$ pues:
 
@@ -655,6 +661,8 @@ Consideramos $p_3=25373$. Factorizamos de nuevo $p_3-1$:
 
 $$p_3-1=2^2\cdot 6343.$$
 
+Sacamos los factores 2 y no es necesario usar el método a $6343$, pues está en la lista.
+
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_3$ porque $2^{p_3-1}\equiv 1\mod p_3$ y $2^{\frac{p_3-1}{p}}\not\equiv 1\mod p_3 $ para $p\in\{2, 6343\}$ pues:
 
 $$2^{\frac{p_3-1}{2}}\equiv 25372\mod p_3$$
@@ -663,6 +671,8 @@ $$2^{\frac{p_3-1}{6343}}\equiv 16\mod p_3$$
 Continuamos con $p_4=463867$. Factorizamos de nuevo $p_4-1$:
 
 $$p_4-1=2\cdot 3\cdot 313 \cdot 19\cdot 13.$$
+
+Donde primero se extraen los factores 2 y se aplica el método a $231933$, necesitando 10 iteraciones totales.
 
 Y, con Lucas-Lehmer tenemos que $a=12$ es un elemento primitivo para $p_4$ porque $12^{p_4-1}\equiv 1\mod p_4$ y $12^{\frac{p_4-1}{p}}\not\equiv 1\mod p_4 $ para $p\in\{2, 3, 313, 19, 13\}$ pues:
 
@@ -676,6 +686,8 @@ Comprobamos ahora $p_5=2118187$. Factorizamos de nuevo $p_5-1$:
 
 $$p_5-1=2\cdot 3^2\cdot 7 \cdot 16811.$$
 
+Donde, de nuevo, se ha sacado el factor 2 y se aplica el método a $1059093$, usando 4 iteraciones en total.
+
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_5$ porque $2^{p_5-1}\equiv 1\mod p_5$ y $2^{\frac{p_5-1}{p}}\not\equiv 1\mod p_5 $ para $p\in\{2, 3, 7, 16811\}$ pues:
 
 $$2^{\frac{p_5-1}{2}}\equiv 2118186 \mod p_5$$
@@ -686,6 +698,8 @@ $$2^{\frac{p_5-1}{16811}}\equiv 1526343 \mod p_5$$
 Finalmente, comprobamos que $p_6=16811$ es primo descomponiendo $p_6-1$:
 
 $$p_6-1=2\cdot 5\cdot 41^2.$$
+
+Esta descomposición se ha hecho a mano, ya que el número era pequeño.
 
 Y con Lucas-Lehmer obtenemos $a=7$ es elemento primitivo para $p_6$, porque $7^{p_6-1}\equiv 1\mod p_6$ y $7^{\frac{p_6-1}{p}}\not\equiv 1\mod p_6 $ para $p\in\{2, 5, 41\}$ pues:
 

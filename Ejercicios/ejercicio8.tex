@@ -65,12 +65,16 @@ Como $2844871984646731064442373175299276800090\equiv -1 \mod n$ tenemos que $n$ 
 Aplicando $\rho$ de Polard a $n+1$ obtenemos:
 $$n+1 = 2^2\cdot 31 \cdot 63929\cdot 600702031\cdot 352173733409\cdot 1696395339263.$$
 
+Primero se han extraído los factores 2 y se ha aplicado el algoritmo a $711217996161682766110593293824819200023$, necesitando un total de más de 1000 iteraciones hasta descomponer el número.
+
 Vamos a comprobar ahora mediante Lucas-Lehmer que los primos obtenidos mayores de $10000$ son, en efecto, primos.
 
 \subsubsection{1696395339263}
 Consideramos $p_1=1696395339263$, luego aplicando $\rho$ de Polard a $p_1-1$:
 
 $$P_1-1=2 cdot 13 cdot 757 cdot 1621 \cdot 53171$$.
+
+De nuevo, primero se ha extraído el factor 2 y se ha aplicado el método a $848197669631$, empleando 74 iteraciones en total.
 
 Y por Lucas-Lehmer tenemos que $a=5$ es un elemento primitivo para $p_1$ porque $5^{p_1-1}\equiv 1\mod p_1$ y $5^{\frac{p_1-1}{p}}\not\equiv 1\mod p_1 $ para $p\in\{2, 13, 757, 1621, 53171\}$ pues:
 
@@ -86,6 +90,8 @@ Consideramos ahora $p_2=53171$, luego aplicando $\rho$ de Polard a $p_2-1$:
 
 $$p_2-1=2 cdot 5 cdot 13 cdot 409$$.
 
+Se extra el factor 2 y se aplica el algoritmo a $26585$, necesitando 7 iteraciones en total.
+
 Y por Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_2$ porque $2^{p_2-1}\equiv 1\mod p_2$ y $2^{\frac{p_2-1}{p}}\not\equiv 1\mod p_2 $ para $p\in\{2, 5, 13, 409\}$ pues:
 
 \begin{verbatim}
@@ -98,7 +104,9 @@ Y por Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_2$ porque 
 \subsubsection{352173733409}
 Consideramos $p_3=352173733409$, luego aplicando $\rho$ de Polard a $p_3-1$:
 
-$$p_3-1=2 cdot 7 \cdot 349\cdot 4504883$$.
+$$p_3-1=2^5 cdot 7 \cdot 349\cdot 4504883$$.
+
+Primero se ha extraído el factor 2 y se aplica el método a $11005429169$, requiriendo 31 iteraciones en total.
 
 Y por Lucas-Lehmer tenemos que $a=15$ es un elemento primitivo para $p_3$ porque $15^{p_3-1}\equiv 1\mod p_3$ y $15^{\frac{p_3-1}{p}}\not\equiv 1\mod p_3 $ para $p\in\{2, 7, 349, 4504883\}$ pues:
 
@@ -113,6 +121,8 @@ Consideramos ahora $p_4=4504883$, luego aplicando $\rho$ de Polard a $p_4-1$:
 
 $$p_4-1=2 cdot 2252441$$.
 
+Primero se ha extraído el factor 2, y se va a comprobar que $2252441$ es primo.
+
 Y por Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_4$ porque $2^{p_4-1}\equiv 1\mod p_4$ y $2^{\frac{p_4-1}{p}}\not\equiv 1\mod p_4 $ para $p\in\{2, 2252441\}$ pues:
 
 \begin{verbatim}
@@ -122,7 +132,9 @@ Y por Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_4$ porque 
 
 Ahora comprobamos $p_5=2252441$, luego aplicando $\rho$ de Polard a $p_5-1$:
 
-$$p_5-1=2 \cdot 5\cdot 56311$$.
+$$p_5-1=2^3 \cdot 5\cdot 56311$$.
+
+De nuevo, se extraen los factor 2 y se aplica el método a $281555$, para lo que se necesitan 3 iteraciones en total.
 
 Y por Lucas-Lehmer tenemos que $a=3$ es un elemento primitivo para $p_5$ porque $3^{p_5-1}\equiv 1\mod p_5$ y $3^{\frac{p_5-1}{p}}\not\equiv 1\mod p_5 $ para $p\in\{2, 5, 56311\}$ pues:
 
@@ -135,6 +147,8 @@ Y por Lucas-Lehmer tenemos que $a=3$ es un elemento primitivo para $p_5$ porque 
 Finalmente consideramos $p_6=56311$, luego aplicando $\rho$ de Polard a $p_6-1$:
 
 $$p_6-1=2 \cdot 3\cdot 5\cdot 1877$$.
+
+Se extrae el factor 2 y se aplica el método a $28155$, necesitando este 4 iteraciones en total.
 
 Y por Lucas-Lehmer tenemos que $a=6$ es un elemento primitivo para $p_6$ porque $6^{p_6-1}\equiv 1\mod p_6$ y $6^{\frac{p_6-1}{p}}\not\equiv 1\mod p_6 $ para $p\in\{2, 3,5,1877\}$ pues:
 
@@ -149,7 +163,9 @@ Y por Lucas-Lehmer tenemos que $a=6$ es un elemento primitivo para $p_6$ porque 
 
 Consideramos $p_7=600702031$, luego aplicando $\rho$ de Polard a $p_7-1$:
 
-$$p_7-1=2 \cdot 3\cdot 5\cdot 37\cdot 180391$$.
+$$p_7-1=2 \cdot 3^2\cdot 5\cdot 37\cdot 180391$$.
+
+Primero sacamos el factor 2, y aplicamos el método a $300351015$, necesitando este número 9 iteraciones en total.
 
 Y por Lucas-Lehmer tenemos que $a=3$ es un elemento primitivo para $p_7$ porque $3^{p_7-1}\equiv 1\mod p_7$ y $3^{\frac{p_7-1}{p}}\not\equiv 1\mod p_7 $ para $p\in\{2, 3,5,37, 180391\}$ pues:
 
@@ -165,6 +181,8 @@ Consideramos ahora $p_8=180391$, luego aplicando $\rho$ de Polard a $p_8-1$:
 
 $$p_8-1=2 \cdot 3\cdot 5\cdot 7\cdot 859$$.
 
+Sacamos el factor 2 y aplicamos el algoritmo a $90195$, que requiere de 6 iteraciones totales.
+
 Y por Lucas-Lehmer tenemos que $a=7$ es un elemento primitivo para $p_8$ porque $7^{p_8-1}\equiv 1\mod p_8$ y $7^{\frac{p_8-1}{p}}\not\equiv 1\mod p_8 $ para $p\in\{2, 3,5,7, 859\}$ pues:
 
 \begin{verbatim}
@@ -179,7 +197,9 @@ Y por Lucas-Lehmer tenemos que $a=7$ es un elemento primitivo para $p_8$ porque 
 
 Consideramos $p_9=63929$, luego aplicando $\rho$ de Polard a $p_9-1$:
 
-$$p_9-1=2 \cdot 61\cdot 131$$.
+$$p_9-1=2^3 \cdot 61\cdot 131$$.
+
+Primero extraemos los factores 2 y aplicamos el algoritmo a $7991$, que necesita un total de 7 iteraciones.
 
 Y por Lucas-Lehmer tenemos que $a=3$ es un elemento primitivo para $p_9$ porque $3^{p_9-1}\equiv 1\mod p_9$ y $3^{\frac{p_9-1}{p}}\not\equiv 1\mod p_9 $ para $p\in\{2, 61,131\}$ pues:
 
