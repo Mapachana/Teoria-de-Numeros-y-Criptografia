@@ -65,14 +65,14 @@ Como $2844871984646731064442373175299276800090\equiv -1 \mod n$ tenemos que $n$ 
 Aplicando $\rho$ de Polard a $n+1$ obtenemos:
 $$n+1 = 2^2\cdot 31 \cdot 63929\cdot 600702031\cdot 352173733409\cdot 1696395339263.$$
 
-Primero se han extraído los factores 2 y se ha aplicado el algoritmo a $711217996161682766110593293824819200023$, necesitando un total de más de 1000 iteraciones hasta descomponer el número.
+Primero se han extraído los factores 2 y se ha aplicado el algoritmo a $711217996161682766110593293824819200023$, necesitando un total de 602931 iteraciones hasta descomponer el número.
 
 Vamos a comprobar ahora mediante Lucas-Lehmer que los primos obtenidos mayores de $10000$ son, en efecto, primos.
 
 \subsubsection{1696395339263}
 Consideramos $p_1=1696395339263$, luego aplicando $\rho$ de Polard a $p_1-1$:
 
-$$P_1-1=2 cdot 13 cdot 757 cdot 1621 \cdot 53171$$.
+$$p_1-1=2 \cdot 13 \cdot 757 \cdot 1621 \cdot 53171$$.
 
 De nuevo, primero se ha extraído el factor 2 y se ha aplicado el método a $848197669631$, empleando 74 iteraciones en total.
 
@@ -85,10 +85,11 @@ Y por Lucas-Lehmer tenemos que $a=5$ es un elemento primitivo para $p_1$ porque 
 5^(n-1)/ 1621 = 274109562190 mod n
 5^(n-1)/ 53171 = 40822449061 mod n
 \end{verbatim}
+Nota: En estos códigos aunque la salida referencie a n, esto es por el print del programa y se refiere al $p_i$ correspondiente a cada apartado. Se ha dejado la salida estándar del programa por simplicidad.
 
 Consideramos ahora $p_2=53171$, luego aplicando $\rho$ de Polard a $p_2-1$:
 
-$$p_2-1=2 cdot 5 cdot 13 cdot 409$$.
+$$p_2-1=2 \cdot 5 \cdot 13 \cdot 409$$.
 
 Se extra el factor 2 y se aplica el algoritmo a $26585$, necesitando 7 iteraciones en total.
 
@@ -104,7 +105,7 @@ Y por Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_2$ porque 
 \subsubsection{352173733409}
 Consideramos $p_3=352173733409$, luego aplicando $\rho$ de Polard a $p_3-1$:
 
-$$p_3-1=2^5 cdot 7 \cdot 349\cdot 4504883$$.
+$$p_3-1=2^5 \cdot 7 \cdot 349\cdot 4504883$$.
 
 Primero se ha extraído el factor 2 y se aplica el método a $11005429169$, requiriendo 31 iteraciones en total.
 
@@ -119,7 +120,7 @@ Y por Lucas-Lehmer tenemos que $a=15$ es un elemento primitivo para $p_3$ porque
 
 Consideramos ahora $p_4=4504883$, luego aplicando $\rho$ de Polard a $p_4-1$:
 
-$$p_4-1=2 cdot 2252441$$.
+$$p_4-1=2 \cdot 2252441$$.
 
 Primero se ha extraído el factor 2, y se va a comprobar que $2252441$ es primo.
 
@@ -286,6 +287,6 @@ U[1677010021663162226328754085] = 1763051658554971058144663755734831569150
 \end{verbatim}
 
 
-Para P=1, Q=2 tenemos que ningún $U_{\frac{r}{p}}\not\equiv 0\mod n$ y $U_r\equiv 0\mod n$, luego tenemos que el rango de $n$ es $n+1$ y por tanto es primo.
+Para P=1, Q=2 tenemos que ningún $U_{\frac{r}{p}}\not\equiv 0\mod n$ y $U_r\equiv 0\mod n$, luego tenemos que el rango de $n$ es $n+1$ y $(n,2Qd)=1$, y por tanto $n$ es primo.
 
 \end{document}

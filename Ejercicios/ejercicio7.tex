@@ -634,9 +634,12 @@ De nuevo, primero se divide entre los factores 2 y aplicamos el algoritmo a $107
 
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $43117$ porque $2^{43117-1}\equiv 1\mod 43117$ y $2^{\frac{43117-1}{p}}\not\equiv 1\mod 43117 $ para $p\in\{2,3,3593\}$ pues:
 
-$$2^{\frac{43117-1}{2}}\equiv 43116\mod 43117$$
-$$2^{\frac{43117-1}{3}}\equiv 9558\mod 43117$$
-$$2^{\frac{43117-1}{3593}}\equiv 4096\mod 43117$$
+\begin{verbatim}
+2^(n-1)/ 2 = 43116 mod n
+2^(n-1)/ 3 = 9558 mod n
+2^(n-1)/ 3593 = 4096 mod n
+\end{verbatim}
+Nota: En estos códigos aunque la salida referencie a n, esto es por el print del programa y se refiere al $p_i$ correspondiente a cada apartado. Se ha dejado la salida estándar del programa por simplicidad.
 
 Consideramos ahora $p_2=210626099398147601381287$. Factorizamos de nuevo $p_2-1$:
 
@@ -646,14 +649,16 @@ Sacamos los factores 2 y aplicamos el método a $105313049699073800690643$, para
 
 Y, con Lucas-Lehmer tenemos que $a=5$ es un elemento primitivo para $p_2$ porque $5^{p_2-1}\equiv 1\mod p_2$ y $5^{\frac{p_2-1}{p}}\not\equiv 1\mod p_2 $ para $p\in\{2, 3, 113, 17, 25373, 733, 463867, 2118187\}$ pues:
 
-$$5^{\frac{p_2-1}{2}}\equiv 210626099398147601381286 \mod p_2$$
-$$5^{\frac{p_2-1}{3}}\equiv 201052306676548796207380 \mod p_2$$
-$$5^{\frac{p_2-1}{113}}\equiv 52303081321116716056069 \mod p_2$$
-$$5^{\frac{p_2-1}{17}}\equiv 82697440648428203877263 \mod p_2$$
-$$5^{\frac{p_2-1}{25373}}\equiv 193688392282791819942315 \mod p_2$$
-$$5^{\frac{p_2-1}{733}}\equiv 186869216112249535026689 \mod p_2$$
-$$5^{\frac{p_2-1}{463867}}\equiv 37506715538082165466792 \mod p_2$$
-$$5^{\frac{p_2-1}{2118187}}\equiv 83038764093421513984660 \mod p_2$$
+\begin{verbatim}
+5^(n-1)/ 2 = 210626099398147601381286 mod n
+5^(n-1)/ 3 = 201052306676548796207380 mod n
+5^(n-1)/ 113 = 52303081321116716056069 mod n
+5^(n-1)/ 17 = 82697440648428203877263 mod n
+5^(n-1)/ 25373 = 193688392282791819942315 mod n
+5^(n-1)/ 733 = 186869216112249535026689 mod n
+5^(n-1)/ 463867 = 37506715538082165466792 mod n
+5^(n-1)/ 2118187 = 83038764093421513984660 mod n
+\end{verbatim}
 
 Como hemos obtenido factores primos mayores de $10000$, comprobamos su primalidad.
 
@@ -665,8 +670,10 @@ Sacamos los factores 2 y no es necesario usar el método a $6343$, pues está en
 
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_3$ porque $2^{p_3-1}\equiv 1\mod p_3$ y $2^{\frac{p_3-1}{p}}\not\equiv 1\mod p_3 $ para $p\in\{2, 6343\}$ pues:
 
-$$2^{\frac{p_3-1}{2}}\equiv 25372\mod p_3$$
-$$2^{\frac{p_3-1}{6343}}\equiv 16\mod p_3$$
+\begin{verbatim}
+2^(n-1)/ 2 = 25372 mod n
+2^(n-1)/ 6343 = 16 mod n
+\end{verbatim}
 
 Continuamos con $p_4=463867$. Factorizamos de nuevo $p_4-1$:
 
@@ -676,11 +683,13 @@ Donde primero se extraen los factores 2 y se aplica el método a $231933$, neces
 
 Y, con Lucas-Lehmer tenemos que $a=12$ es un elemento primitivo para $p_4$ porque $12^{p_4-1}\equiv 1\mod p_4$ y $12^{\frac{p_4-1}{p}}\not\equiv 1\mod p_4 $ para $p\in\{2, 3, 313, 19, 13\}$ pues:
 
-$$12^{\frac{p_4-1}{2}}\equiv 463866 \mod p_4$$
-$$12^{\frac{p_4-1}{3}}\equiv 47777 \mod p_4$$
-$$12^{\frac{p_4-1}{313}}\equiv 36373 \mod p_4$$
-$$12^{\frac{p_4-1}{19}}\equiv 171844 \mod p_4$$
-$$12^{\frac{p_4-1}{13}}\equiv 344990 \mod p_4$$
+\begin{verbatim}
+12^(n-1)/ 2 = 463866 mod n
+12^(n-1)/ 3 = 47777 mod n
+12^(n-1)/ 313 = 36373 mod n
+12^(n-1)/ 19 = 171844 mod n
+12^(n-1)/ 13 = 344990 mod n
+\end{verbatim}
 
 Comprobamos ahora $p_5=2118187$. Factorizamos de nuevo $p_5-1$:
 
@@ -690,10 +699,13 @@ Donde, de nuevo, se ha sacado el factor 2 y se aplica el método a $1059093$, us
 
 Y, con Lucas-Lehmer tenemos que $a=2$ es un elemento primitivo para $p_5$ porque $2^{p_5-1}\equiv 1\mod p_5$ y $2^{\frac{p_5-1}{p}}\not\equiv 1\mod p_5 $ para $p\in\{2, 3, 7, 16811\}$ pues:
 
-$$2^{\frac{p_5-1}{2}}\equiv 2118186 \mod p_5$$
-$$2^{\frac{p_5-1}{3}}\equiv 1491183 \mod p_5$$
-$$2^{\frac{p_5-1}{7}}\equiv 1355468 \mod p_5$$
-$$2^{\frac{p_5-1}{16811}}\equiv 1526343 \mod p_5$$
+\begin{verbatim}
+2^(n-1)/ 2 = 2118186 mod n
+2^(n-1)/ 3 = 1491183 mod n
+2^(n-1)/ 3 = 1491183 mod n
+2^(n-1)/ 7 = 1355468 mod n
+2^(n-1)/ 16811 = 1526343 mod n
+\end{verbatim}
 
 Finalmente, comprobamos que $p_6=16811$ es primo descomponiendo $p_6-1$:
 
@@ -703,9 +715,11 @@ Esta descomposición se ha hecho a mano, ya que el número era pequeño.
 
 Y con Lucas-Lehmer obtenemos $a=7$ es elemento primitivo para $p_6$, porque $7^{p_6-1}\equiv 1\mod p_6$ y $7^{\frac{p_6-1}{p}}\not\equiv 1\mod p_6 $ para $p\in\{2, 5, 41\}$ pues:
 
-$$7^{\frac{p_6-1}{2}}\equiv 16810 \mod p_6$$
-$$7^{\frac{p_6-1}{5}}\equiv 2954 \mod p_6$$
-$$7^{\frac{p_6-1}{41}}\equiv 11826 \mod p_6$$
+\begin{verbatim}
+7^(n-1)/ 2 = 16810 mod n
+7^(n-1)/ 5 = 2954 mod n
+7^(n-1)/ 41 = 11826 mod n
+\end{verbatim}
 
 Por tanto. queda comprobada la correcta factorización de $r$ en números primos:
 $$r=2^2\cdot 19\cdot 53\cdot 43117\cdot 210626099398147601381287.$$
