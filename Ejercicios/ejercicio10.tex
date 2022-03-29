@@ -80,10 +80,19 @@ Paso 3:   237287 = 2*84564 + 68159
 Paso 4:   84564 = 1*68159 + 16405
 \end{verbatim}
 
+Tras 4 divisiones obtenemos el resto $x=16405$. Por tanto, podemos hallar $y$ despejando de la ecuación:
+$$4p =x^2 + 11y^2  \Leftrightarrow y = \sqrt{\frac{4p-x^2}{11}}=1953$$
+
+Así, se cumple  $4p = 16405^2+11\cdot 1953^2$
+
+Luego tenemos que la factorización de $p$ en a.e. de $\mathbb{Q}[\sqrt{p}]$ es
+$$p= \left( \frac{x+y\sqrt{-11}}{2}\right) \left( \frac{x-y\sqrt{-11}}{2}\right) = \left( \frac{16405+1953\sqrt{-11}}{2}\right) \left( \frac{16405-1953\sqrt{-11}}{2}\right)$$
+
 
 \subsection{Apartado 4}
 \textbf{¿ Son principales tus ideales (p,n+$\sqrt{-11}$)(p,n+$\sqrt{-11}$)}
 
+Son principales ya que $\mathbb{Q}[\sqrt{-11}]$ es DIP.
 
 
 \end{document}
