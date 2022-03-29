@@ -28,9 +28,9 @@ $p = 77770081$
 
 Tenemos que $\left( \frac{-11}{p}\right)=1$ luego aplicamos el algoritmo de Tonelli-Shanks para hallar las soluciones de $x^2\equiv -11\mod p$.
 
-Para ello, comenzamos factorizando $p-1=2^5\cdot 3^2\cdot 5 \cdot 53\cdot 1019$
+Para ello, primero vamos a comprobar que $p$ es primo.
 
-Para ello vamos a usar el método $\rho$ de Polard. Comenzamos sacando los factores 2, y aplicamos el algoritmo a 2430315. Para factorizar este número han sido necesarias un total de 11 iteraciones.
+Comenzamos factorizando $p-1$. Y se obtiene que $p-1=2^5\cdot 3^2\cdot 5 \cdot 53\cdot 1019$ mediante el método $\rho$ de Polard. Comenzamos sacando los factores 2, y aplicamos el algoritmo a 2430315. Para factorizar este número han sido necesarias un total de 11 iteraciones.
 
 Finalmente, aplicamos Lucas-Lehmer, obtenemos que 17 es elemento primitivo para $p$, ya que $17^{p-1}\equiv 1\mod p$ y $17^{\frac{p-1}{p}}\not\equiv 1\mod p $ para $p\in\{2,3,5, 53, 1019\}$ pues::
 
@@ -49,7 +49,7 @@ Como $p\equiv 1\mod 8$ tenemos que usar Tonelli-Shanks.
 Hemos visto además que $p-1=2^5\cdot 2430315$, y  como $(-11)^{2430315} \equiv 158982 \mod p \not\equiv 1\mod p$.
 Y este tiene orden $2^2 \mod p$.
 
-Calculamos ahora un no residuo cuadrático módulo p, y el primero es $n=17$.
+Calculamos ahora un número que no sea residuo cuadrático módulo p, y el primero es $n=17$, pues $\left(\frac{n}{p}\right)=-1$.
 
 Por tanto un generador del 2-subgrupo de Sylow $G=\mathbb{Z}_{2^{17}}$.
 
@@ -64,9 +64,11 @@ Soluciones: 796425 76973656
 Luego la soluciones son $796425$ y $76973656$, que se corresponden con $r_1$ y $p-r_1$.
 
 \subsection{Apartado 2}
-\textbf{Usa una de esas soluciones para factorizar el ideal principal, (p) =(p,n+$\sqrt{-11}$)(p,n+$\sqrt{-11}$) como producto de dos ideales.}
+\textbf{Usa una de esas soluciones para factorizar el ideal principal, (p) =(p,n+$\sqrt{-11}$)(p,n+$\sqrt{-11}$) como producto de dos ideales.¿ Por qué estos dos son ideales primos ?}
 
 Tomamos la solución impar $n=796425$ y como $p$ es un impar primo que no divide a -11 entonces $(p)=\left(p, 796425+\sqrt{-11}\right)\left(796425-\sqrt{-11}\right)$
+
+Como $-11\equiv 77770070 \mod p$ es un cuadrado, pues $796425^2\equiv 77770070 \mod p$, entonces la factorización obtenida es una factorización en primos.
 
 \subsection{Apartado 3}
 \textbf{Aplica el algoritmo de Cornachia- Smith modificado a 2p y n para encontrar una solucíón a la ecuación diofántica $4p =x^2 + 11y^2$ y la usas para encontrar una factorización de p en a.e. del cuerpo $\mathbb{Q}(\sqrt{-11})$.}
@@ -92,7 +94,7 @@ $$p= \left( \frac{x+y\sqrt{-11}}{2}\right) \left( \frac{x-y\sqrt{-11}}{2}\right)
 \subsection{Apartado 4}
 \textbf{¿ Son principales tus ideales (p,n+$\sqrt{-11}$)(p,n+$\sqrt{-11}$)}
 
-Son principales ya que $\mathbb{Q}[\sqrt{-11}]$ es DIP.
+Por el teorema 17, como estamos tomando $m=-11$, los ideales son principales ya que $\mathbb{Q}[\sqrt{-11}]$ es DIP.
 
 
 \end{document}
