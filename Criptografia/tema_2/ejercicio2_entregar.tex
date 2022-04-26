@@ -47,7 +47,7 @@ Tenemos que $k=k_0k_1k_2k_3$ y se define $E_K=\sigma_{K_2} \circ \pi \circ \gamm
 
 Ahora calculamos nuestro dni módulo 65536, resultando $77770080\mod 65536\equiv 44384$.
 
-Y, pasanod 44384 a binario y hexadecimal tenemos que:
+Y, pasando 44384 a binario y hexadecimal tenemos que:
 
 $$k = 1010110101100000 = 0xAD60.$$
 
@@ -72,6 +72,8 @@ $$w_1 = k_1 = D = 1101$$
 $$w_2 = k_2 = 6 = 0110$$
 $$w_3 = k_3 = 0 = 0000$$
 
+luego $K_0=1010 1101 0110 0000$.
+
 Calculamos $K_1$:
 
 $$w_4 = w_0 \oplus \gamma (w_3) \oplus 0001 = 1010 \oplus \gamma (0000) \oplus 0001 = 1000$$
@@ -79,12 +81,16 @@ $$w_5 = w_1 \oplus w_4 = 1101 \oplus 1000 = 0101$$
 $$w_6 = w_2 \oplus w_5 = 0110 \oplus 0101 = 0011$$
 $$w_7 = w3_ \oplus w_6 = 0000 \oplus 0011 = 0011$$
 
+luego $K_1=1000 0101 0011 0011$.
+
 Calculamos $K_2$:
 
 $$w_8 = w_4 \oplus \gamma (w_7) \oplus 0010 = 1000 \oplus \gamma (0011) \oplus 0010 = 1101$$
 $$w_9 = w_5 \oplus w_8 = 0101 \oplus 1101 = 1000$$
 $$w_{10} = w_6 \oplus w_9 = 0011 \oplus 1000 = 1011$$
 $$w_{11} = w_7 \oplus w_{10} = 0011 \oplus  1011 = 1000$$
+
+Y $K_2=1101 1000 1011 1000$.
 
 Comenzamos calculando $E_K (m_1 \oplus c_{[0]} ) = E_K ( 0000 0001 0010 0011 \oplus 0000 0000 0000 0001) = E_K(0000 0001 0010 0010)$.
 
