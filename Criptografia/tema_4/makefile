@@ -1,7 +1,7 @@
-main.pdf: ejercicio3_entregar.tex pseudo_clean #prepare_bibliography
-	pdflatex --shell-escape ejercicio3_entregar.tex
-	pdflatex --shell-escape ejercicio3_entregar.tex
-	pdflatex --shell-escape ejercicio3_entregar.tex
+main.pdf: ejercicio4_entregar.tex pseudo_clean #prepare_bibliography
+	pdflatex --shell-escape ejercicio4_entregar.tex
+	pdflatex --shell-escape ejercicio4_entregar.tex
+	pdflatex --shell-escape ejercicio4_entregar.tex
 	#cp main.pdf ../main.pdf
 	$(MAKE) pseudo_clean
 
