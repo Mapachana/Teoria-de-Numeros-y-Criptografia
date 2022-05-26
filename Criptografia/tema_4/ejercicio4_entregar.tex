@@ -41,6 +41,8 @@ También calculamos $g^{-f}=g^{p-1-f}=67 \mod p$.
 
 Empezando por $h_0=109$, vamos a calcular parejas $(i,h_i)$, con $h_i=h_{i-1}g^{-f}\mod p$ hasta que alguno de estos $h_i$ pertenezca a la tabla ya calculada.
 
+Las parejas calculadas son: $(0,109)$, $(1,129)$, $(2,203)$, $(3,97)$, $(4,169)$, $(5,140)$, $(6,96)$.
+
 Obtenemos la pareja $(6,96)$, donde $96$ está en la tabla en la posición $6$.
 
 Luego tenemos $a=j+if=6+6\cdot 15=96$.
@@ -59,7 +61,9 @@ $r_{1,0}=1$, $r_{1,1}=210$.
 
 Y la sucesión de coeficientes:
 
-$y_0 = 1$, $x_0 = 0$.
+$y_0 = 109$, $x_0 = 0$.
+
+Calculamos además $y_0^{\frac{n}{p_1^{0+1}}}=109^{\frac{210}{2}}\equiv 1\mod p$.
 
 Luego $m_1=0$.
 
@@ -69,7 +73,10 @@ $r_{2,0}=1$, $r_{2,1}=196$, $r_{2,2}=14$.
 
 Y la sucesión de coeficientes:
 
-$y_0 = 1$, $x_0 = 0$.
+$y_0 = 109$, $x_0 = 0$.
+
+Calculamos además $y_0^{\frac{n}{p_2^{0+1}}}=109^{\frac{210}{3}}\equiv 1\mod p$.
+
 
 Luego $m_2=0$.
 
@@ -79,7 +86,10 @@ $r_{3,0}=1$, $r_{3,1}=188$, $r_{3,2}=107$, $r_{3,3}=71$, $r_{3,4}=55$.
 
 Y la sucesión de coeficientes:
 
-$y_0 = 188$, $x_0 = 1$.
+$y_0 = 109$, $x_0 = 1$.
+
+Calculamos además $y_0^{\frac{n}{p_3^{0+1}}}=109^{\frac{210}{5}}\equiv 188\mod p$.
+
 
 Luego $m_3=1$.
 
@@ -89,7 +99,10 @@ $r_{4,0}=1$, $r_{4,1}=171$, $r_{4,2}=123$, $r_{4,3}=144$, $r_{4,4}=148$, $r_{4,5
 
 Y la sucesión de coeficientes:
 
-$y_0 = 199$, $x_0 = 5$.
+$y_0 = 109$, $x_0 = 5$.
+
+Calculamos además $y_0^{\frac{n}{p_4^{0+1}}}=109^{\frac{210}{7}}\equiv 199\mod p$.
+
 
 Luego $m_4=5$.
 
@@ -113,6 +126,8 @@ Dado que la solución obtenida por los dos algoritmos es la misma, procedemos a 
 Mi DNI es 77770080, y $77770080 \mod 211 \equiv 122$, luego el criptograma que vamos a descifrar es $(154,122)$.
 
 Tenemos que $D_{a}(x,y)=yx^{-a}$, sustituyento $D_{96}(154,122)=122 \cdot 154^{-96}=193$.
+
+Luego el mensaje original es $193$.
 
 
 

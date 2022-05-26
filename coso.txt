@@ -1,0 +1,4 @@
+F.<xi>=GF(16)
+E = EllipticCurve(F,[1,F(xi+1),0,0,F(xi^2+xi)])
+P = E([xi^2,xi^13)
+12*P
