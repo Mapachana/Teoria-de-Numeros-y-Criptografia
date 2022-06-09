@@ -26,7 +26,35 @@ Mi dni es 77770080, luego tenemos que $77770080 \mod 32 \equiv 0$, por lo que de
 
 \textbf{Calcula, mediante el algoritmo de Shank o mediante el Algoritmo 9, $\log_{Q}O$}
 
-Res
+Vamos a usar el algoritmo de Shank.
+
+Acotamos $|E| \leq q+1+\lfloor 2\sqrt{q}\rfloor = 32+1+\lfloor 2\sqrt{32}\rfloor = 44$.
+
+Luego $f=\lceil \sqrt{44} \rceil = 7$.
+
+Construimos la tabla usando sagemath:
+
+\begin{table}[!h]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+ $Q$ & $(\xi^4+\xi+1, \xi^4+\xi^2+\xi)$  \\
+ \hline
+ $2Q$ & $(1,\xi^4+\xi^3+\xi^2+1)$  \\ 
+ \hline
+ $3Q$ & $(\xi^4+\xi^2+1, \xi^4+\xi^3)$  \\ 
+ \hline
+ $4Q$ & $(\xi+1,\xi+1)$  \\ 
+ \hline
+ $5Q$ & $(\xi^4+\xi^3+\xi^2+\xi, \xi^4+\xi^3+\xi^2+1)$  \\ 
+ \hline
+ $6Q$ & $(\xi^4+\xi^3+\xi, \xi^3+\xi)$  \\ 
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
 
 \section{Apartado 2}
 
